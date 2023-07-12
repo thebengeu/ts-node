@@ -270,6 +270,60 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dprint/darwin-arm64@npm:0.39.0":
+  version: 0.39.0
+  resolution: "@dprint/darwin-arm64@npm:0.39.0"
+  bin:
+    darwin-arm64: bin.js
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@dprint/darwin-x64@npm:0.39.0":
+  version: 0.39.0
+  resolution: "@dprint/darwin-x64@npm:0.39.0"
+  bin:
+    darwin-x64: bin.js
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@dprint/linux-arm64-glibc@npm:0.39.0":
+  version: 0.39.0
+  resolution: "@dprint/linux-arm64-glibc@npm:0.39.0"
+  bin:
+    linux-arm64-glibc: bin.js
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@dprint/linux-x64-glibc@npm:0.39.0":
+  version: 0.39.0
+  resolution: "@dprint/linux-x64-glibc@npm:0.39.0"
+  bin:
+    linux-x64-glibc: bin.js
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@dprint/linux-x64-musl@npm:0.39.0":
+  version: 0.39.0
+  resolution: "@dprint/linux-x64-musl@npm:0.39.0"
+  bin:
+    linux-x64-musl: bin.js
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@dprint/win32-x64@npm:0.39.0":
+  version: 0.39.0
+  resolution: "@dprint/win32-x64@npm:0.39.0"
+  bin:
+    win32-x64: bin.js
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -1639,12 +1693,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dprint@npm:^0.25.0":
-  version: 0.25.1
-  resolution: "dprint@npm:0.25.1"
+"dprint@npm:^0.39.0":
+  version: 0.39.0
+  resolution: "dprint@npm:0.39.0"
+  dependencies:
+    "@dprint/darwin-arm64": 0.39.0
+    "@dprint/darwin-x64": 0.39.0
+    "@dprint/linux-arm64-glibc": 0.39.0
+    "@dprint/linux-x64-glibc": 0.39.0
+    "@dprint/linux-x64-musl": 0.39.0
+    "@dprint/win32-x64": 0.39.0
+  dependenciesMeta:
+    "@dprint/darwin-arm64":
+      optional: true
+    "@dprint/darwin-x64":
+      optional: true
+    "@dprint/linux-arm64-glibc":
+      optional: true
+    "@dprint/linux-x64-glibc":
+      optional: true
+    "@dprint/linux-x64-musl":
+      optional: true
+    "@dprint/win32-x64":
+      optional: true
   bin:
     dprint: bin.js
-  checksum: ffccd5419295d4d509818e51b906609c8dd03a0ddba55f14e1893641ba00dcda800e052e8c255966be5db780a084f703044f1f6f2a050c3b4b4c611f661b827d
+  checksum: 2738600ff4ee34dd0c3425a5e7ca8422b5bd77554c59e188636809d23cd5142fd7fac9077c138b02c31c44df84ce5b094afca5fd04efbfaf3a46373ece88eabf
   languageName: node
   linkType: hard
 
@@ -3835,7 +3909,7 @@ __metadata:
     axios: ^0.21.1
     cross-spawn: ^7.0.3
     diff: ^4.0.1
-    dprint: ^0.25.0
+    dprint: ^0.39.0
     expect: 27.0.2
     lodash: ^4.17.15
     make-error: ^1.1.1
